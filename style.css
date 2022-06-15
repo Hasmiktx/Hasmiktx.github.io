@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(176, 244, 244);
+}
+
+#divImg{
+margin-left: 25px;
+}
+
+
+#div1 {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 25px;
+    font-size: 25px;
+     color:blue;
+    font-style: oblique;
+}
+
+
+h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+#p1{
+    font-size: 35px;
+    font-style: italic;
+    color: blue;
+    text-align: center;
+    
+    
+}
+img{
+    
+    height: 300px;
+}
