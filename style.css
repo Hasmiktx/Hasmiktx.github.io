@@ -8,16 +8,21 @@ body{
 }
 button{
     
+    text-align: center;
+    width: 100px;
+    height: 30px;
     cursor: pointer;
     color:whitesmoke;
     background-color:rgb(4, 23, 40) ;
-    font-size: x-large;
+    font-size: 20px;
     margin-top: 2%;
     margin-left: 15%;
     border-radius: 50%;
+    border:1px solid #08F4D2;
 
     
 }
+
 #home a, #about a, #contact a{
     color: aliceblue;
     text-decoration: none;
@@ -50,7 +55,7 @@ button{
 
 img {
     display: block;
-   padding:4%;
+   padding:5%;
   margin-left: auto;
   margin-right: auto;
 width: 250px;
