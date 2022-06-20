@@ -17,7 +17,7 @@ button{
     font-size: 20px;
     margin-top: 2%;
     margin-left: 15%;
-    border-radius: 45%;
+    border-radius: 30px;
     border:2px solid #08F4D2;
 
     
@@ -48,7 +48,7 @@ button{
     background-image: url("images/pic1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 0% 30%;
     width: 1450px;
     height: 700px;
 }
