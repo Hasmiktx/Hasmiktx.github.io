@@ -9,6 +9,7 @@ HTML<br>
 CSS<br><br>`;
 
 function skillFunc() {
+  document.body.style.backgroundColor = "darkgray";
   conteiner.innerHTML = skillText;
 
   conteiner.style.textAlign = "center";
