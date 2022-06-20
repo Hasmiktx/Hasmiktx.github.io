@@ -17,8 +17,8 @@ button{
     font-size: 20px;
     margin-top: 2%;
     margin-left: 15%;
-    border-radius: 50%;
-    border:1px solid #08F4D2;
+    border-radius: 45%;
+    border:2px solid #08F4D2;
 
     
 }
@@ -29,24 +29,28 @@ button{
 }
 
 
-#conteiner{
+#cont{
+    
     margin-left: auto;
     margin-right: auto;
     width: 1400px;
     height: 700px;
     padding: 10px;
 }
-#conteiner1{
-    margin-top: 2%;
+#conteiner{
+    
+    
+    padding: 10px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2%;
+    
     background-image: url("images/pic1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0% 30%;
-    width: 99%;
-    height: 99%;
+    background-position: center;
+    width: 1450px;
+    height: 700px;
 }
 
     
@@ -71,10 +75,11 @@ border-radius:50%;
 
 
 
-.h1{
+.h2{
     
     text-align: center;
     color: #08F4D2;
+    font-family: sans-serif;
     
 }
 

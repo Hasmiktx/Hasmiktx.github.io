@@ -57,6 +57,7 @@ li{
     color: aliceblue;
     font-size: larger;
     margin-left:40px ;
+    list-style: none;
 }
 li a{
     text-decoration: none;
