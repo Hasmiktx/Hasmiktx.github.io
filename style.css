@@ -32,7 +32,7 @@ button{
 
 #conteiner{
     
-    
+   
     padding: 10px;
     margin-top: 20px;
     margin-left: auto;
@@ -42,7 +42,7 @@ button{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0% 30%;
-    width: 1450px;
+   max-width: 1450px;
     height: 700px;
 }
 
