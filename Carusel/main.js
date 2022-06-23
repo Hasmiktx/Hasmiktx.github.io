@@ -4,6 +4,7 @@ const array = [
   "images/img3.jpg",
   "images/img4.jpg",
   "images/img5.jpg",
+  "images/img6.jpg",
 ];
 
 const playBtn = document.getElementById("playbtn");

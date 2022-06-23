@@ -3,21 +3,28 @@
     margin: 0;
     box-sizing: border-box; 
 }
+    body{
+        height:100vh;
+        
+    }
+
 .conteiner{
-    background-color: beige;
+    
     display: flex;
     flex-flow: column nowrap;
     
     max-width: 600px;
+    min-width: 200px;
     height: 800px;
     margin-left: auto;
     margin-right: auto;
     padding: 30px;
+    background-color: rgb(215, 215, 208);
 }
 .header{
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #f44336;
     padding: 30px 40px;
     color: white;
@@ -29,38 +36,67 @@
   #input-zone{
       display: flex;
       justify-content: center;
+      
 
   }
   .context{
-      flex: 3;
+      
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-start;
-      border: 1px solid gray;
+      border: 3px solid whitesmoke;
       padding: 30px;
       
       
     
   }
-  #input{
+  #to-do-input{
       
-      max-width:300px ;
+      flex:1;
       height: 40px;
+      outline:none;
+      padding:2px;
   }
   button{
-      border: 0cm;
+      
     cursor: pointer;
       background-color: rgb(185, 183, 183);
       width:60px;
       height: 40px;
+      border: 0cm;
   }
-.ul{
+.listDiv{
+    display: flex;
+    
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
     text-align:left;
-    font-size: xx-large;
+    font-size:large;
     color: black;
     border: 1px solid gray;
     margin-bottom: 20px;
-    max-width: 300px;
+    max-width: 300px; 
     height: 40px;
+    background-color: darkgrey;
 }
+#warning-div{
+    
+    display: none;
+    max-width: 300px;
+    height: 30px;
+    background-color: rgb(241, 245, 245);
+    text-align: center;
+    color:red;
+    font-size: larger;
+    border: 1px solid red;
 
+}
+.delete-btn{
+    cursor: pointer;
+    width: 20px;
+}
+.check{
+    width: 20px;
+
+}
