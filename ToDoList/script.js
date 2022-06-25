@@ -51,6 +51,11 @@ function addList() {
 // }
 
 btnAdd.addEventListener("click", addList);
+toDoInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    addList();
+  }
+});
 toDoInput.addEventListener("keydown", () => {
   warningDiv.style.display = "none";
 });
