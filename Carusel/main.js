@@ -21,7 +21,7 @@ function slideShowNext() {
   } else {
     indx = 0;
   }
-  slide.style.backgroundImage = "url(" + array[indx] + ")";
+  slide.style.backgroundImage = `url(${array[indx]})`; /*"url(" + array[indx] + ")";*/
 }
 function slideShowPrev() {
   if (indx > 0 && indx <= array.length - 1) {
