@@ -1,4 +1,4 @@
 # Hasmiktx.github.io
-https://hasmiktx.github.io/Carusel/ <br>
-https://hasmiktx.github.io/ToDoList/ <br>
-<a href="https://hasmiktx.github.io/Portfolio/">Portgolio<a/>
+<a href ="https://hasmiktx.github.io/Carusel/">Carusel<a/> <br>
+<a href="https://hasmiktx.github.io/ToDoList/">ToDoList<a/> <br>
+<a href="https://hasmiktx.github.io/Portfolio/">Portfolio<a/>
