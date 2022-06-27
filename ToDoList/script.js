@@ -20,9 +20,11 @@ function addList() {
     warningFunc();
   } else {
     const li = document.createElement("li");
-    li.innerHTML = toDoInput.value;
+    const textnode = document.createTextNode(`${toDoInput.value}`);
+
+    li.appendChild(textnode);
     const liDiv = document.createElement("div");
-    liDiv.appendChild(li);
+    liDiv.append(li);
     const del = document.createElement("input");
     del.setAttribute("type", "button");
     del.setAttribute("value", "x");
