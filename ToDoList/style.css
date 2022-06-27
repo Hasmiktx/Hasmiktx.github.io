@@ -8,9 +8,14 @@
         
     }
 
+
+.flex{
+    display: flex;
+    flex-wrap: nowrap;
+}
 .conteiner{
     
-    display: flex;
+    
     flex-flow: column nowrap;
     
     max-width: 600px;
@@ -21,8 +26,11 @@
     padding: 30px;
     background-color: rgb(215, 215, 208);
 }
+#h2{
+    justify-content: center;
+}
 .header{
-    display: flex;
+    
     flex-flow: column nowrap;
     justify-content: space-around;
     background-color: #f44336;
@@ -34,7 +42,7 @@
     
   }
   #input-zone{
-      display: flex;
+      
       justify-content: center;
       
 
@@ -42,7 +50,8 @@
 
   #to-do-input{
       
-    flex:1;
+    /* flex:1; */
+    width: 70%;
     height: 40px;
     outline:none;
     padding:2px;
@@ -61,7 +70,7 @@
       
     cursor: pointer;
       background-color: rgb(185, 183, 183);
-      width:60px;
+      width:30%;
       height: 40px;
       border: 0cm;
   }
@@ -82,19 +91,22 @@
         border: 1px solid grey;
     
     }
+
+
 #ul{
-    display: flex;
     
-    justify-content: flex-start;
+    
+    
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: flex-start;
     text-align:left;
+    margin-left: 50px;
     
     }
 li{
     display: flex;
-
+    margin-left: 5px;
     list-style: none;
     color: #fff;
     font-size: larger;
@@ -110,12 +122,15 @@ li{
 }
 .listDivs{
     display: flex;
-    flex-flow: row, nowrap;
+    
     justify-content: space-between;
+    
     height: 30px;
-    width: 200px;
-    margin-bottom: 2px;
-    background-color: rgba(108, 107, 107, 0.867);;
+    width: 300px;
+    margin-bottom: 4px;
+    background-color: rgba(108, 107, 107, 0.867);
+    
+    text-align: left;
 }
 
 .check{
@@ -125,9 +140,10 @@ li{
 
 }
 .deleteBtn{
+    
     cursor: pointer;
     font-size: small;
-    width: 40px;
+    width: 20%;
     height: 30px;
 }
 

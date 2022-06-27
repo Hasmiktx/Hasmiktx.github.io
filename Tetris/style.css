@@ -1,12 +1,28 @@
-.game-container {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#conteiner {
+    border: 1px solid red;
     display: flex;
-    width: 200px;
-    height: 300px;
-    margin: 10px auto;
+    width: 320px;
+    height: 450px;
+    margin: 30px auto;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .cell { 
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     border: 1px solid black;
+    
+}
+
+.active {
+    background-color: red;
+}
+
+.freeze{
+    background-color: chartreuse;
 }

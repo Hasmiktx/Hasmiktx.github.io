@@ -21,13 +21,17 @@ function addList() {
   } else {
     const li = document.createElement("li");
     li.innerHTML = toDoInput.value;
+    const liDiv = document.createElement("div");
+    liDiv.appendChild(li);
     const del = document.createElement("input");
     del.setAttribute("type", "button");
-    del.setAttribute("value", "X");
+    del.setAttribute("value", "x");
     del.classList.add("deleteBtn");
-    li.appendChild(del);
+
+    liDiv.classList.add("flex");
     const div = document.createElement("div");
-    div.appendChild(li);
+
+    div.append(liDiv);
     div.appendChild(del);
     div.classList.add("listDivs");
     ul.appendChild(div);
