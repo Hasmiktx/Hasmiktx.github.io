@@ -2,7 +2,7 @@ body{
     background-color: #08F4D2;
 }
 *
-{
+{box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -15,8 +15,8 @@ button{
     color:whitesmoke;
     background-color:rgb(4, 23, 40) ;
     font-size: 20px;
-    margin-top: 2%;
-    margin-left: 15%;
+    
+    
     border-radius: 30px;
     border:2px solid #08F4D2;
 
@@ -32,9 +32,11 @@ button{
 
 #conteiner{
     
-   
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: space-around;
     padding: 10px;
-    margin-top: 20px;
+    
     margin-left: auto;
     margin-right: auto;
     
@@ -42,24 +44,32 @@ button{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0% 30%;
-   max-width: 1450px;
-    height: 700px;
+   max-width: 1600px;
+    height: 750px;
 }
 
+
+#header{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 200px;
+}
     
-    
+    #content {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        
+    }
 
 
 img {
-    display: block;
+    
    border: 3px solid #08F4D2;
-   margin-top: 9%;
-  margin-left: auto;
-  margin-right: auto;
-width: 250px;
+   max-width: 250px;
 
-image-rendering: pixelated;
-border-radius:50%;
+    image-rendering: pixelated;
+    border-radius:50%;
 
 }
 

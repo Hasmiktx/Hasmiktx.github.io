@@ -12,6 +12,7 @@ const pauseBtn = document.getElementById("pausebtn");
 const slide = document.getElementsByClassName("child")[0];
 const nextBtn = document.getElementById("next");
 const prevBtn = document.getElementById("prev");
+
 let timerId;
 let indx = 0;
 
@@ -41,4 +42,9 @@ playBtn.addEventListener("click", function () {
 });
 pauseBtn.addEventListener("click", function () {
   clearInterval(timerId);
+});
+document.addEventListener("click", (e) => {
+  if (e.target === slide) {
+    slideShowNext();
+  }
 });

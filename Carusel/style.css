@@ -5,6 +5,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url("https://media.gettyimages.com/videos/soft-white-background-video-id1132439239?s=640x640");
+    background-position:center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
 .flex{
     display: flex;
 }
@@ -67,14 +74,16 @@ button{
     font-size: large;
     background-color: rgb(15, 123, 87);
     border: 1px solid whitesmoke;
+    width: 60px;
+    height: 40px;
 
 }
 #playbtn{
     border-right: 3px solid whitesmoke;
 }
 #prev{
- width:35px;   
- height:20px;
+ width:30px;   
+ height:30px;
  border:0cm;
  border-radius: 50%;
 background-image: url("images/LeftRow.png");
@@ -82,8 +91,8 @@ background-size: cover;
 background-position: center center;
 }
 #next{
-    width:35px;   
-    height:20px;
+    width:30px;   
+    height:30px;
     border: 0cm;
     border-radius: 50%;
     background-image: url("images/RightRow.png");
