@@ -5,11 +5,12 @@ function playGame() {
   const pauseBtn = document.getElementById("pause");
   const scoretxt = document.getElementsByTagName("span")[0];
   scoretxt.style.color = "red";
-  let scoreNum = 0;
+  gameOverDiv = document.createElement("div");
 
   const color = ["red", "deeppink", "chartreuse", "blue", "orange"];
   let random = getRandomInt(0, color.length - 1);
   let startIndx = 3;
+  let scoreNum = 0;
 
   let timerId;
 
@@ -28,11 +29,12 @@ function playGame() {
   }
   drawBoard();
 
+  let cells = Array.from(document.querySelectorAll(".cell"));
+
   const lastRow = [];
   const leftMargin = [];
   const rightMargin = [];
 
-  let cells = Array.from(document.querySelectorAll(".cell"));
   for (let i = (rowCount - 1) * colCount; i < cells.length; i++) {
     lastRow.push(i);
   }
@@ -83,7 +85,7 @@ function playGame() {
     [colCount, colCount + 1, colCount + 2, colCount + 3],
   ];
 
-  /* assign array of icon types, current icon and current rotation type */
+  /* assign array of icon types, current icon type and current rotation type */
 
   const tetroArray = [lTetro, quadroTetro, zTetro, tTetro, iTetro];
   let rotationCount = 2;
@@ -110,17 +112,20 @@ function playGame() {
     });
   }
 
-  /*   play   moveDown   moveLeft  moveRight   functions    */
+  /*              play                   function                */
 
   function play() {
-    //?????????????????????????Game over multiply
-    clearInterval(timerId); ////////////////////important or no???///////////////////////??
-    if (!current) {
-      current = tetroArray[random][rotationCount];
-      drawTetro();
+    if (!display.contains(gameOverDiv)) {
+      clearInterval(timerId); ////////////////////important or no???///////////////////////??
+      if (!current) {
+        current = tetroArray[random][rotationCount];
+        drawTetro();
+      }
+      timerId = setInterval(moveDown, 1000);
     }
-    timerId = setInterval(moveDown, 1000);
   }
+
+  /*               moveDown   moveLeft  moveRight   functions                  */
 
   function moveDown() {
     unDraw();
@@ -157,14 +162,15 @@ function playGame() {
       drawTetro();
     }
   }
+  /*                          rotate func                                                */
 
   function rotate() {
     // ????? if condition????    and   iTetro ?????????????
     if (
       !current.some(
         (val) =>
-          leftMargin.includes(startIndx - 1 + val) ||
-          rightMargin.includes(startIndx + 1 + val) ||
+          leftMargin.includes(startIndx + val) ||
+          rightMargin.includes(startIndx + val) ||
           cells[startIndx + val - 1].classList.contains("freeze") ||
           cells[startIndx + val + 1].classList.contains("freeze") ||
           cells[startIndx + val + colCount].classList.contains("freeze")
@@ -182,7 +188,7 @@ function playGame() {
     }
   }
 
-  /*              freeze function                 */
+  /*                          freeze function                            */
 
   function freeze() {
     if (
@@ -206,21 +212,14 @@ function playGame() {
       gameOver();
     }
   }
-
+  /*                                  score func                 */
   function score() {
     for (let index = 0; index < cells.length; index += 10) {
-      const row = [
-        index,
-        index + 1,
-        index + 2,
-        index + 3,
-        index + 4,
-        index + 5,
-        index + 6,
-        index + 7,
-        index + 8,
-        index + 9,
-      ];
+      const row = [];
+      for (let div = 0; div < 10; div++) {
+        row.push(index + div);
+      }
+
       if (row.every((val) => cells[val].classList.contains("freeze"))) {
         scoreNum += 10;
         scoretxt.innerHTML = scoreNum;
@@ -237,9 +236,9 @@ function playGame() {
       }
     }
   }
+  /*                 gameOver                         */
 
   function gameOver() {
-    gameOverDiv = document.createElement("div");
     gameOverDiv.classList.add("gameOverDiv");
     gameOverDiv.innerHTML = "GAME OVER";
     if (
@@ -252,7 +251,7 @@ function playGame() {
     }
   }
 
-  /*      addEventListeners            */
+  /*                               addEventListeners                     */
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowDown") {
