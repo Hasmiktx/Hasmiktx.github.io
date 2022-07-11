@@ -78,11 +78,12 @@ function playGame() {
 
   iTetro = [
     [0, colCount, colCount * 2, colCount * 3],
-    [colCount, colCount + 1, colCount + 2, colCount + 3],
+    //[colCount, colCount + 1, colCount + 2, colCount + 3],
+    [-1, 0, 1, 2],
 
     [0, colCount, colCount * 2, colCount * 3],
 
-    [colCount, colCount + 1, colCount + 2, colCount + 3],
+    [-1, 0, 1, 2],
   ];
 
   /* assign array of icon types, current icon type and current rotation type */
@@ -270,3 +271,8 @@ function playGame() {
 }
 
 playGame();
+
+// restart.addEventListener("click", function () {
+
+//   playGame();
+// });
