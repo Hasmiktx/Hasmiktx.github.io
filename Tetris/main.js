@@ -205,7 +205,9 @@ function playGame() {
 
       startIndx = 3;
       let nextInteger = getRandomInt(0, color.length - 1);
+
       random = nextInteger;
+      //console.log(random);
       current = tetroArray[random][rotationCount];
 
       drawTetro();

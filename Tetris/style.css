@@ -72,6 +72,7 @@ input{
 }
 .tetro{
     background-color: aquamarine; 
+    border: 0.3px solid rgb(170, 154, 154);
 }
 
 .gameOverDiv {

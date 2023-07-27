@@ -1,0 +1,45 @@
+#container{
+    display: flex;
+    justify-content: space-evenly;
+    border:1px solid black;
+    width: 500px;
+  
+    
+    margin: auto;
+  }
+  
+  
+  
+  .elevators{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .elevator{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(225, 137, 247);
+  
+  }
+  #floors{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .floor{
+    display: flex;
+    justify-content: center;
+    
+    width: 300px;
+    height: 40px;
+    background-color: chartreuse;
+    margin-top: 5px;
+    border-bottom: 3px solid black;
+  }
+  img{
+    width: 40px;
+    height: 40px;
+  }
