@@ -1,9 +1,10 @@
 function moveElevators() {
 
-    const elavators= document.querySelectorAll(".elevator");
     
+    const divForEl=document.querySelector(".elevators");
     
     const floorDiv= document.getElementById("floors");
+    const divLift= document.querySelectorAll(".elevator_lift")
     
     
     
@@ -16,10 +17,19 @@ function moveElevators() {
       img.src="smile.png";
       div.appendChild(img);
       floorDiv.appendChild(div);
+      const divEl=document.createElement("div");
+      divEl.classList.add("elevator");
+    
+      divForEl.appendChild(divEl);
+      if(divLift[i-1]){
+        divEl.appendChild(divLift[i-1])
+      }
+
     
      }
     
-    
+     const elavators= document.querySelectorAll(".elevator");
+
      const floors= document.querySelectorAll(".floor");
     
      let diffArr;
@@ -30,8 +40,8 @@ function moveElevators() {
         diffArr=[];
         const floor= i+1;
         
-        elavators.forEach((elevator,j)=>{
-          elevator.style.backgroundColor="rgb(225, 137, 247)";
+        divLift.forEach((elevator,j)=>{
+          elevator.style.backgroundColor="orange";
           
           let diff= Math.abs(floor-(Number(elevator.innerHTML)));
           diffArr.push(diff);
@@ -43,16 +53,16 @@ function moveElevators() {
         console.log(diffArr,"diffArr")
         let nearIndx=diffArr.indexOf(nearElevator);
         let secondIndx=diffArr.lastIndexOf(nearElevator);
-        console.log(nearIndx,"near");
-        console.log(secondIndx, "second")
+        // console.log(nearIndx,"near");
+        // console.log(secondIndx, "second")
         if(nearIndx!==secondIndx){
         
-          alert(`Avaible elevators in floor ${elavators[nearIndx].innerHTML} and ${elavators[secondIndx].innerHTML}`)
+          alert(`Avaible elevators in floor ${divLift[nearIndx].innerHTML} and ${divLift[secondIndx].innerHTML}`)
         }
-        elavators[nearIndx].innerHTML=floor;
-        elavators[nearIndx].style.backgroundColor="red";
-        
-        fl.appendChild(elavators[nearIndx])
+        divLift[nearIndx].innerHTML=floor;
+        divLift[nearIndx].style.backgroundColor="red";
+        //   console.log(floor,"floor")
+        elavators[i].appendChild(divLift[nearIndx])
     
     
         
