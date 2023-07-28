@@ -9,7 +9,13 @@
     margin: auto;
   }
   
-  
+  p{
+    font-size: 2rem;
+    color: rgb(4, 173, 49);
+    font-weight: 800;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
   
   .elevators{
     display: flex;
