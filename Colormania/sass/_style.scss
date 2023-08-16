@@ -1,7 +1,4 @@
 
-// h2{
-//     color: red;
-// }
 
 .col{
   display: flex;
@@ -13,22 +10,24 @@
   
   
    h2{
-    color:green;
+    color:$text-color;
     transition: background ease-in-out 0.3s;
 
 
    }
    h2:hover{
-    background-color: rgb(219, 219, 247);
+    background-color: $back-color;
     border-radius: 3px;
     cursor: pointer;
    }
-   span{
-    transition: background ease-in-out 0.3s;
+   h2::selection{
+    color:$text-color;
+    background-color: $back-color;
+
    }
+   
    span:hover{
-    //  background-color: rgb(117, 117, 142);
-    //  border-radius: 3px;
+    
      cursor: pointer;
    }
 }
