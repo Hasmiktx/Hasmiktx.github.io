@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    /* text-align: center; */
+}
+
+header {
+    background-color: #1e14e8;
+    color: #fff;
+     padding: 20px 0;
+     height: 20vh;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin-top: 15vh;
+}
+.container {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav {
+    display: flex;
+    
+}
+ul{
+    display: flex;
+
+}
+nav li {
+    margin-right: 20px;
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+a{
+    color: #f3ecec;
+    text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+.wall {
+    display: grid;
+    grid-template-columns: repeat(var(--width), 50px);
+    gap: 5px;
+    text-align: center;
+}
+
+.brick {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #000;
+}
+
+.diagonal {
+    background-color: red;
+    color: white;
+}
+
+
