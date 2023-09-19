@@ -5,11 +5,11 @@
 }
 body {
     font-family: Arial, sans-serif;
-    /* text-align: center; */
+    
 }
 
 header {
-    background-color: #1e14e8;
+    background-color: #100f22;
     color: #fff;
      padding: 20px 0;
      height: 20vh;
@@ -99,9 +99,16 @@ a{
     border: 1px solid #000;
 }
 
-.diagonal {
-    background-color: red;
-    color: white;
+#generate{
+    background-color: #0e0d26;
+    cursor: pointer;
+    color: aliceblue;
+    width: 10rem;
+    height: 2rem;
+    margin-top: 1rem;
+    
 }
 
-
+#generate:hover{
+    background-color: #323150;
+}
