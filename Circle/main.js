@@ -29,7 +29,11 @@ backgImg.src="gravity.jpg"
 
     }
     this.draw=function(){
-    
+       if(this.x<10){
+        this.x=this.x+this.r
+       }else if(canvas.width-this.x<15){
+        this.x=canvas.width-this.r
+       }
        ctx.beginPath();
        ctx.arc(this.x,this.y, this.r, 0, 2 * Math.PI);
        ctx.fillStyle = this.color;
@@ -70,6 +74,7 @@ function tick() {
     return Math.floor(Math.random()*(max-min))+min
    }
   document.addEventListener("click",(evt)=>{
+    
     const ball=new Circle(evt.clientX,evt.clientY);
     
     if(circles.length>=15){
