@@ -1,37 +1,57 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
-canvas.width=window.innerWidth;
+canvas.width=window.innerWidth/1.5
 canvas.height=window.innerHeight;
 const circles=[];
-const deltaTime=0.1;
+
+const backgImg=document.createElement("img");
+backgImg.src="gravity.jpg"
 
 
+
+
+   function Circle(x,y){
+    this.x=x,
+    this.y=y,
+    this.r=getRandom(20,50),
+    this.yDelta=0;
+    this.color="rgb("+getRandom(0,255)+","+getRandom(0,255)+","+getRandom(0,255)+")";
+    this.update=function(deltaTime){
+          
+        this.yDelta += 0.5 * deltaTime;
+        
+        this.y += this.yDelta
+
+        if (this.y + this.r> canvas.height) {
+            this.y = canvas.height - this.r;
+            this.yDelta *= -0.8; // Dampening effect on bounce
+        }
+
+    }
+    this.draw=function(){
+    
+       ctx.beginPath();
+       ctx.arc(this.x,this.y, this.r, 0, 2 * Math.PI);
+       ctx.fillStyle = this.color;
+       ctx.fill();
+    
+    //    console.log(this.color,"color")
+    }
+   }
 const draw=()=>{
     ctx.clearRect(0,0,canvas.width,canvas.height)
+    ctx.drawImage(backgImg, 0, 0, canvas.width, canvas.height);
   circles.forEach((ball)=>{
-    ctx.beginPath();
-    ctx.arc(ball.x,ball.y, ball.radius, 0, 2 * Math.PI);
-    ctx.fillStyle = 'red';
-    ctx.fill();
-    ctx.closePath();
+    
+    ball.draw()
   })  
 
 }
 
 const update=()=>{
     circles.forEach((ball) =>{
-       
-            
-            ball.yDelta += 0.5 * deltaTime;
-        
-        ball.y += ball.yDelta
-
-        if (ball.y + ball.radius > canvas.height) {
-            ball.y = canvas.height - ball.radius;
-            ball.yDelta *= -0.8; // Dampening effect on bounce
-        }
-        
-      });
+       ball.update(0.1)
+         });
 }
 
 
@@ -44,12 +64,17 @@ function tick() {
   }
   
   tick();
+  
 
+   function getRandom(min,max){
+    return Math.floor(Math.random()*(max-min))+min
+   }
   document.addEventListener("click",(evt)=>{
-   circles.push({
-    yDelta:0,
-    x:evt.clientX,
-    y:evt.clientY,
-    radius:30
-   })
+    const ball=new Circle(evt.clientX,evt.clientY);
+    
+    if(circles.length>=15){
+      circles.shift();
+    }
+    circles.push(ball)
+
   })
