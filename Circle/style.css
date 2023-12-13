@@ -1,0 +1,15 @@
+/* body {
+    
+    padding: 5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+} */
+
+canvas {
+    /* display: block; */
+    background-color: rgb(7, 118, 66)
+    
+}
