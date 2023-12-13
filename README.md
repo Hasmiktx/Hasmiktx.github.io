@@ -7,5 +7,5 @@
 <a href="https://hasmiktx.github.io/ToDoList/">ToDoList<a/> <br>
 <a href="https://hasmiktx.github.io/Elevators/">Elevators<a/><br>
 <a href="https://hasmiktx.github.io/Colors_Game/">Colors_Game<a/><br>
-<a href="https://hasmiktx.github.io/Circle/">Colors_Game<a/>
+<a href="https://hasmiktx.github.io/Circle/">Gravity<a/>
 
