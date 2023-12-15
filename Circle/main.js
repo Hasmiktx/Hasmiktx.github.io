@@ -4,6 +4,8 @@ canvas.height=window.innerHeight;
 const backgImg=document.createElement("img");
 backgImg.src="gravity.jpg"
 const circles=[];
+const maxCircles = 15;
+const deltaTime = 0.1;
 
 
 
@@ -58,7 +60,7 @@ const draw=()=>{
 
 const update=()=>{
     circles.forEach((ball) =>{
-       ball.update(0.1)
+       ball.update(deltaTime)
          });
 }
 
@@ -83,7 +85,7 @@ document.addEventListener("click",(evt)=>{
     
     const ball=new Circle(evt.clientX,evt.clientY);
     
-     if(circles.length>=15){
+     if(circles.length>=maxCircles){
       circles.shift();
      }
       circles.push(ball)
